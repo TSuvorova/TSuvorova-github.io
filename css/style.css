@@ -1,0 +1,196 @@
+/* This styling is primarily for the home page. The nav-link, nav, navbarNav all refer to the navbar and its styling. There is a fade in animation on the body of each page. And there is also a hover animation on each button on the nav bar.*/
+#Tatyana {
+  height: 300px;
+  width: auto;
+  margin: 5px;
+}
+
+#Logo{
+  width:150px;
+  height:auto;
+}
+
+.name {
+  color: black;
+}
+
+.nav-link, #Resume {
+  font-size: 35px;
+  color: black;
+}
+
+.nav-link, #Resume {
+  background-color: #688A93;
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+nav {
+  background-color: #B0C2CC;
+  display: none;
+}
+
+#navbarNav {
+  width: 6000px;
+  padding: 30px;
+}
+
+.AboutMe {
+  font-size: 20px;
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+}
+
+body {
+  animation: fadeInAnimation ease 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*This is styling that is tied to the Resume page of the portfolio. The navbar has an extra button which refers to the */
+/*The header contains the h1 and the address, as well as the links. This centers that information in the middle of the page.*/
+header {
+  text-align: center;
+}
+
+/*Each section on the resume contain all of the information on the page (besides the footer). The margin pushes it away from the all sides of the website. Specifically from the bottom, top and left side.*/
+section, footer {
+  margin: 40px;
+}
+
+/*This styling makes the intro paragraph that is below the <br> and the address and links at the top and basically all of the text on this page bigger by 20px. It just makes them bigger so that they're easier to see.*/
+#Intro, address, footer, a, section {
+  font-size: 20px;
+}
+
+.Info, .Contacts, .Social {
+  text-align: center;
+}
+
+.Info {
+  font-size: 40px;
+}
+
+.Contacts {
+  font-size: 30px;
+}
+
+#Resume {
+  text-decoration: none;
+}
+
+/* This centers the download button on the Resume page.*/
+#Download, #Resume {
+  margin: 0 auto;
+}
+
+/*This is the styling for the Best Works Page.*/
+figure {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 400px));
+  gap: 5px;
+  width: 70%;
+  /* This is the size of your container width */
+  margin: auto;
+}
+
+/* This container is needed to position the overlay, adjust width as you like.*/
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/* This will make images responsive*/
+.images {
+  max-width: 50%;
+  margin: 5px;
+}
+
+.section1 {
+display: block;
+}
+
+.section2 {
+display: block;
+
+}
+
+.heading{
+  text-align: center;
+  padding:10px;
+}
+
+/* This next style is for the overlay effect */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(118, 145, 190, 0.5);
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transform: scale(0);
+  transition: .8s ease;
+}
+
+/* When you mouse over the container, the overlay will zoom a little */
+.container:hover .overlay {
+  transform: scale(1);
+}
+
+/* Now lets center the text and color */
+.text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.BestWorks {
+  text-align: center;
+}
+
+/*This is the styling for the breakpoint.*/
+@media only screen and (max-width: 480px) {
+  .AboutMe {
+    font-size: 20px;
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .section1 {
+    float: left;
+  }
+
+  .section2 {
+    float:left;
+   }
+
+
+}
